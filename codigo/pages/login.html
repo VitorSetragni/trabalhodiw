@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">CapitalRise</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cadastro.html">Cadastro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar border-bottom border-body" id="custom-nav">
+    <h1>Login</h1>
+  </nav>
+  <br />
+  <br />
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <br />
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="login">Usuário</label>
+            <input type="text" class="form-control" id="login" name="login" />
+          </div>
+          <br />
+          <div class="mb-3">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" name="password" />
+          </div>
+          <br />
+
+          <button type="submit" class="btn btn-primary darker-gray darker-gray">
+            Entrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Successful login modal -->
+  <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="cardModalLabel1">Bem-vindo</h5>
+        </div>
+        <div class="modal-body">
+          <p>Login efetuado com sucesso.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary darker-gray" data-dismiss="modal"
+            onclick="window.location.href='landing.html'">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-light fixed-bottom">
+    <div class="container text-center">
+
+    </div>
+    <div class="container text-center">
+      <h5>CapitalRise</h5>
+      <h6>Endereço: Av. Paulista, 1000, São Paulo, SP</h6>
+      <h6>Telefone: (11) 99999-9999</h6>
+    </div>
+  </footer>
+</body>
+
+<script src="../scripts/login.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+
+</html>

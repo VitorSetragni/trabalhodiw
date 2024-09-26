@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestGo</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">CapitalRise</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="landing.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="meus_investimentos.html">Meus Investimentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produtos.html">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historico.html">historico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forum.html">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="aprendizado.html">Aprendizado</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="logout()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+              <path fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- That yellow sexy bar. -->
+  <nav class="navbar border-bottom border-body" id="custom-nav">
+    <h1 id="welcomeMessage">Tipos de Investimento</h1>
+  </nav>
+  <br />
+  <br />
+
+  <div class="container">
+    <br />
+    <br />
+  </div>
+  <div class="container">
+    <!-- Row 1 -->
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">CDB</h5>
+            <p class="card-text">
+              O Certificado de Depósito Bancário (CDB) é um título de renda
+              fixa emitido por bancos. Quando você investe em CDB, está
+              emprestando dinheiro ao banco e, em troca, recebe juros sobre o
+              valor investido.
+            </p>
+            <button type="button" class="btn btn-primary darker-gray" data-bs-toggle="modal"
+              data-bs-target="#cardModal1">
+              Saber mais
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tesouro Direto</h5>
+            <p class="card-text">
+              O Tesouro Direto é um programa do Tesouro Nacional que permite a
+              compra de títulos públicos federais por pessoas físicas, de
+              forma fácil e acessível, pela internet.
+            </p>
+            <button type="button" class="btn btn-primary darker-gray" data-bs-toggle="modal"
+              data-bs-target="#cardModal2">
+              Saber mais
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">LCI/LCA</h5>
+            <p class="card-text">
+              LCI (Letra de Crédito Imobiliário) e LCA (Letra de Crédito do
+              Agronegócio) são títulos de renda fixa emitidos por bancos,
+              destinados a financiar os setores imobiliário e agrícola,
+              respectivamente.
+            </p>
+            <button type="button" class="btn btn-primary darker-gray" data-bs-toggle="modal"
+              data-bs-target="#cardModal3">
+              Saber mais
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- Row 2 -->
+    <div class="row">
+      <!-- Card 4 -->
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Debêntures</h5>
+            <p class="card-text">
+              Debêntures são títulos de dívida emitidos por empresas para
+              captar recursos no mercado. Ao investir em debêntures, você está
+              emprestando dinheiro à empresa e, em troca, recebe juros sobre o
+              valor investido.
+            </p>
+            <button type="button" class="btn btn-primary darker-gray" data-bs-toggle="modal"
+              data-bs-target="#cardModal4">
+              Saber mais
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fundos de Investimento</h5>
+            <p class="card-text">
+              Fundos de Investimento são uma forma coletiva de investimento,
+              onde vários investidores aportam recursos em um fundo que é
+              gerido por um gestor profissional. O fundo aplica em uma
+              diversidade de ativos financeiros, conforme a sua política de
+              investimento.
+            </p>
+            <button type="button" class="btn btn-primary darker-gray" data-bs-toggle="modal"
+              data-bs-target="#cardModal5">
+              Saber mais
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fundos Imobiliários</h5>
+            <p class="card-text">
+              Fundos Imobiliários (FIIs) são uma forma de investimento
+              coletivo em ativos do setor imobiliário, como edifícios
+              comerciais, shopping centers, hospitais, e até mesmo títulos
+              imobiliários. Os investidores compram cotas do fundo e, em
+              troca, recebem rendimentos provenientes de aluguéis e da
+              valorização dos imóveis.
+            </p>
+            <button type="button" class="btn btn-primary darker-gray" data-bs-toggle="modal"
+              data-bs-target="#cardModal6">
+              Saber mais
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modals for each card -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="cardModal1" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel1"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="cardModalLabel1">
+            Certificado de Depósito Bancário
+          </h5>
+        </div>
+        <div class="modal-body">
+          <p class="card-text">
+            <strong>Principais Características:</strong>
+          </p>
+
+          <ul>
+            <li>
+              <strong>Rentabilidade</strong>: Pode ser prefixada (taxa fixa
+              definida no momento da aplicação) ou pós-fixada (ligada a um
+              índice, como o CDI).
+            </li>
+            <li>
+              <strong>Liquidez</strong>: Varia conforme o prazo. Alguns CDBs
+              permitem resgate antes do vencimento, mas geralmente rendem mais
+              se mantidos até o final.
+            </li>
+            <li>
+              <strong>Segurança</strong>: Contam com a garantia do Fundo
+              Garantidor de Créditos (FGC) para valores até R$ 250 mil por CPF
+              e por instituição financeira.
+            </li>
+            <li>
+              <strong>Tributação</strong>: Incidem Imposto de Renda e IOF,
+              conforme tabela regressiva de IR (quanto mais tempo o dinheiro
+              fica investido, menor a alíquota de imposto).
+            </li>
+          </ul>
+          <strong>Vantagens</strong>:
+          <ul>
+            <li>Segurança: Proteção do FGC.</li>
+            <li>Variedade: Diversos prazos e condições.</li>
+            <li>Potencial de rentabilidade: Pode ser superior à poupança.</li>
+          </ul>
+          <strong>Desvantagens</strong>:
+          <ul>
+            <li>Liquidez: Pode ser limitada em alguns casos.</li>
+            <li>Tributação: Incidência de impostos sobre os rendimentos.</li>
+          </ul>
+          <strong>Para quem é indicado?</strong>
+          <p>
+            Ideal para investidores que buscam segurança, previsibilidade de
+            rendimentos e estão dispostos a manter o dinheiro investido por um
+            período definido.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2 -->
+  <div class="modal fade" id="cardModal2" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel2"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="cardModalLabel2">
+            Certificado de Depósito Bancário
+          </h5>
+        </div>
+        <div class="modal-body">
+          <p class="card-text">
+            <strong>Principais Características:</strong>
+          </p>
+
+          <ul>
+            <li>
+              <strong>Rentabilidade</strong>: Pode ser prefixada (taxa fixa)
+              ou pós-fixada (ligada à inflação ou à Selic).
+            </li>
+            <li>
+              <strong>Liquidez</strong>: Alta, com possibilidade de venda
+              antecipada nos dias úteis.
+            </li>
+            <li>
+              <strong>Segurança</strong>: Garantido pelo Governo Federal,
+              considerado o investimento mais seguro do país.
+            </li>
+            <li>
+              <strong>Tributação</strong>: Incide Imposto de Renda conforme
+              tabela regressiva (quanto mais tempo investido, menor a
+              alíquota).
+            </li>
+          </ul>
+          <strong>Vantagens:</strong>
+          <ul>
+            <li>Segurança: Garantia do Governo Federal.</li>
+            <li>Diversificação: Vários tipos de títulos disponíveis.</li>
+            <li>
+              Acessibilidade: Investimento inicial a partir de valores baixos.
+            </li>
+          </ul>
+          <strong>Desvantagens:</strong>
+          <ul>
+            <li>Tributação: Incidência de IR sobre os rendimentos.</li>
+            <li>
+              Rentabilidade: Pode ser afetada por variações na taxa Selic e na
+              inflação (para títulos pós-fixados).
+            </li>
+          </ul>
+          <strong>Para quem é indicado?</strong>
+          <p>
+            Ideal para investidores que buscam segurança e previsibilidade, e
+            desejam diversificar sua carteira com um investimento de alta
+            liquidez e baixo risco.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3 -->
+  <div class="modal fade" id="cardModal3" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel3"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="cardModalLabel3">
+            Certificado de Depósito Bancário
+          </h5>
+        </div>
+        <div class="modal-body">
+          <p class="card-text">
+            <strong>Principais Características:</strong>
+          </p>
+
+          <ul>
+            <li>
+              <strong>Rentabilidade</strong>: Pode ser prefixada (taxa fixa)
+              ou pós-fixada (ligada a um índice, como o CDI).
+            </li>
+            <li>
+              <strong>Liquidez</strong>: Variável, geralmente possuem prazos
+              de carência antes de poderem ser resgatados.
+            </li>
+            <li>
+              <strong>Segurança</strong>: Contam com a garantia do Fundo
+              Garantidor de Créditos (FGC) para valores até R$ 250 mil por CPF
+              e por instituição financeira.
+            </li>
+            <li>
+              <strong>Tributação</strong>: Isentas de Imposto de Renda para
+              pessoas físicas.
+            </li>
+          </ul>
+
+          <strong>Vantagens:</strong>
+          <ul>
+            <li>
+              Isenção de IR: Mais rentabilidade líquida para o investidor.
+            </li>
+            <li>Segurança: Proteção do FGC.</li>
+            <li>
+              Diversificação: Boa opção para diversificar a carteira de
+              investimentos.
+            </li>
+          </ul>
+
+          <strong>Desvantagens:</strong>
+          <ul>
+            <li>Liquidez: Pode ser limitada devido a prazos de carência.</li>
+            <li>
+              Acessibilidade: Valor mínimo de aplicação pode ser alto em
+              alguns casos.
+            </li>
+          </ul>
+
+          <strong>Para quem é indicado?</strong>
+          <p>
+            Ideal para investidores que buscam uma rentabilidade atraente,
+            isenção de IR, e estão dispostos a manter o dinheiro investido por
+            um período determinado.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 4 -->
+  <div class="modal fade" id="cardModal4" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel4"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="cardModalLabel4">Debêntures</h5>
+        </div>
+        <div class="modal-body">
+          <p class="card-text"></p>
+          <p><strong>Principais Características:</strong></p>
+          <ul>
+            <li>
+              <strong>Rentabilidade:</strong> Pode ser prefixada (taxa fixa)
+              ou pós-fixada (ligada a um índice, como o CDI ou IPCA).
+            </li>
+            <li>
+              <strong>Liquidez:</strong> Variável, depende das condições do
+              mercado secundário e do prazo de vencimento do título.
+            </li>
+            <li>
+              <strong>Segurança:</strong> Maior risco em comparação a títulos
+              públicos e bancários, pois depende da saúde financeira da
+              empresa emissora.
+            </li>
+            <li>
+              <strong>Tributação:</strong> Incide Imposto de Renda sobre os
+              rendimentos, conforme tabela regressiva.
+            </li>
+          </ul>
+
+          <p><strong>Vantagens:</strong></p>
+          <ul>
+            <li>
+              Potencial de rentabilidade: Pode ser superior a outros
+              investimentos de renda fixa.
+            </li>
+            <li>
+              Diversificação: Oportunidade de diversificar a carteira com
+              diferentes emissores e prazos.
+            </li>
+            <li>
+              Participação em grandes projetos: Financia empresas e setores
+              específicos.
+            </li>
+          </ul>
+
+          <p><strong>Desvantagens:</strong></p>
+          <ul>
+            <li>
+              Risco de crédito: Depende da capacidade da empresa de honrar
+              suas dívidas.
+            </li>
+            <li>Liquidez: Pode ser limitada no mercado secundário.</li>
+            <li>Tributação: Incidência de IR sobre os rendimentos.</li>
+          </ul>
+
+          <p>
+            <strong>Para quem é indicado?</strong><br />
+            Ideal para investidores que buscam maior rentabilidade e estão
+            dispostos a assumir um risco maior, diversificando sua carteira
+            com títulos corporativos.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 5 -->
+  <div class="modal fade" id="cardModal5" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel5"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="cardModalLabel5">
+            Fundos de Investimento
+          </h5>
+        </div>
+        <div class="modal-body">
+          <p class="card-text"></p>
+          <p><strong>Principais Características:</strong></p>
+          <ul>
+            <li>
+              <strong>Rentabilidade:</strong> Varia conforme o tipo de fundo e
+              a performance dos ativos em que ele investe.
+            </li>
+            <li>
+              <strong>Liquidez:</strong> Varia conforme o regulamento do
+              fundo, podendo ser diária, semanal, ou de prazos mais longos.
+            </li>
+            <li>
+              <strong>Segurança:</strong> Diversificação dos ativos reduz o
+              risco, mas depende da qualidade da gestão e dos ativos
+              selecionados.
+            </li>
+            <li>
+              <strong>Tributação:</strong> Incide Imposto de Renda sobre os
+              rendimentos, conforme tabela regressiva, e IOF se resgatado em
+              menos de 30 dias.
+            </li>
+            <li>
+              <strong>Taxas:</strong> Taxa de administração e, em alguns
+              casos, taxa de performance.
+            </li>
+          </ul>
+
+          <p><strong>Vantagens:</strong></p>
+          <ul>
+            <li>
+              Diversificação: Acesso a uma variedade de ativos e mercados.
+            </li>
+            <li>
+              Gestão profissional: Investimentos geridos por especialistas.
+            </li>
+            <li>
+              Acessibilidade: Possibilidade de investir com valores menores do
+              que os exigidos para investir diretamente nos ativos.
+            </li>
+          </ul>
+
+          <p><strong>Desvantagens:</strong></p>
+          <ul>
+            <li>
+              Taxas: Taxas de administração e performance podem impactar a
+              rentabilidade.
+            </li>
+            <li>
+              Liquidez: Pode haver prazo para resgates, dependendo do fundo.
+            </li>
+            <li>
+              Risco: Varia conforme a política de investimento e os ativos do
+              fundo.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Para quem é indicado?</strong><br />
+            Ideal para investidores que buscam diversificação e gestão
+            profissional, e estão dispostos a pagar taxas em troca de
+            potencialmente melhores resultados e comodidade.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 6 -->
+  <div class="modal fade" id="cardModal6" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel6"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="cardModalLabel6">Fundos Imobiliários</h5>
+        </div>
+        <div class="modal-body">
+          <p class="card-text"></p>
+          <p><strong>Principais Características:</strong></p>
+          <ul>
+            <li>
+              <strong>Rentabilidade:</strong> Derivada principalmente dos
+              aluguéis dos imóveis e da valorização dos ativos imobiliários.
+            </li>
+            <li>
+              <strong>Liquidez:</strong> Negociados na Bolsa de Valores,
+              oferecendo facilidade de compra e venda de cotas.
+            </li>
+            <li>
+              <strong>Segurança:</strong> Depende da qualidade dos imóveis e
+              dos contratos de locação. Diversificação dentro do fundo pode
+              reduzir riscos.
+            </li>
+            <li>
+              <strong>Tributação:</strong> Rendimentos mensais são isentos de
+              Imposto de Renda para pessoa física, desde que cumpram
+              determinados requisitos. Ganho de capital na venda das cotas
+              está sujeito a IR.
+            </li>
+          </ul>
+
+          <p><strong>Vantagens:</strong></p>
+          <ul>
+            <li>
+              Rendimentos isentos de IR: Recebimento mensal de aluguéis isento
+              de imposto de renda para pessoa física.
+            </li>
+            <li>Liquidez: Facilidade de negociação na Bolsa de Valores.</li>
+            <li>
+              Diversificação: Exposição a diferentes tipos de imóveis e
+              regiões.
+            </li>
+          </ul>
+
+          <p><strong>Desvantagens:</strong></p>
+          <ul>
+            <li>
+              Risco de vacância: Perda de receita em caso de imóveis
+              desocupados.
+            </li>
+            <li>
+              Valor de mercado: Pode ser influenciado pelas condições do
+              mercado imobiliário e econômico.
+            </li>
+            <li>
+              Taxas: Taxa de administração e gestão que podem impactar a
+              rentabilidade.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Para quem é indicado?</strong><br />
+            Ideal para investidores que buscam renda passiva, diversificação
+            no setor imobiliário e isenção de imposto de renda sobre os
+            rendimentos mensais.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer bg-light fixed-bottom">
+    <div class="container text-center">
+
+    </div>
+    <div class="container text-center">
+      <h5>CapitalRise</h5>
+      <h6>Endereço: Av. Paulista, 1000, São Paulo, SP</h6>
+      <h6>Telefone: (11) 99999-9999</h6>
+    </div>
+  </footer>
+  <script src="../bootstrap/js/bootstrap.js"></script>
+  <script src="../scripts/logout.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CapitalRise</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">CapitalRise</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="landing.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="meus_investimentos.html">Meus Investimentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produtos.html">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historico.html">historico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forum.html">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aprendizado.html">Aprendizado</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="logout()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+              <path fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- That sexy yellow bar -->
+  <nav class="navbar border-bottom border-body" id="custom-nav">
+    <h1>Perfil de investidor</h1>
+  </nav>
+  <br />
+  <br />
+
+  <div class="container">
+    <form id="questionario" onsubmit="compilarResultados(event)">
+      <div class="question">
+        <label>
+          <h5>1. Tenho situação financeira estável?</h5>
+        </label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="financeira1" name="financeira" value="Concordo totalmente" />
+          <label class="form-check-label" for="financeira1">Concordo totalmente</label><br />
+          <input class="form-check-input" type="radio" id="financeira2" name="financeira" value="Concordo" />
+          <label class="form-check-label" for="financeira2">Concordo</label><br />
+          <input class="form-check-input" type="radio" id="financeira3" name="financeira" value="Neutro" />
+          <label class="form-check-label" for="financeira3">Neutro</label><br />
+          <input class="form-check-input" type="radio" id="financeira4" name="financeira" value="Discordo" />
+          <label class="form-check-label" for="financeira4">Discordo</label><br />
+          <input class="form-check-input" type="radio" id="financeira5" name="financeira" value="Discordo totalmente" />
+          <label class="form-check-label" for="financeira5">Discordo totalmente</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>
+          <h5>
+            2. Aceito assumir riscos no curto prazo, pois acredito que no
+            longo prazo o retorno será maior.
+          </h5>
+        </label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="riscos1" name="riscos" value="Concordo totalmente" />
+          <label class="form-check-label" for="riscos1">Concordo totalmente</label><br />
+          <input class="form-check-input" type="radio" id="riscos2" name="riscos" value="Concordo" />
+          <label class="form-check-label" for="riscos2">Concordo</label><br />
+          <input class="form-check-input" type="radio" id="riscos3" name="riscos" value="Neutro" />
+          <label class="form-check-label" for="riscos3">Neutro</label><br />
+          <input class="form-check-input" type="radio" id="riscos4" name="riscos" value="Discordo" />
+          <label class="form-check-label" for="riscos4">Discordo</label><br />
+          <input class="form-check-input" type="radio" id="riscos5" name="riscos" value="Discordo totalmente" />
+          <label class="form-check-label" for="riscos5">Discordo totalmente</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>
+          <h5>
+            3. Ganhar o máximo que puder é importante para mim, mesmo que eu
+            tenha que correr algum risco de perder parte do capital investido.
+          </h5>
+        </label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="ganhar1" name="ganhar" value="Concordo totalmente" />
+          <label class="form-check-label" for="ganhar1">Concordo totalmente</label><br />
+          <input class="form-check-input" type="radio" id="ganhar2" name="ganhar" value="Concordo" />
+          <label class="form-check-label" for="ganhar2">Concordo</label><br />
+          <input class="form-check-input" type="radio" id="ganhar3" name="ganhar" value="Neutro" />
+          <label class="form-check-label" for="ganhar3">Neutro</label><br />
+          <input class="form-check-input" type="radio" id="ganhar4" name="ganhar" value="Discordo" />
+          <label class="form-check-label" for="ganhar4">Discordo</label><br />
+          <input class="form-check-input" type="radio" id="ganhar5" name="ganhar" value="Discordo totalmente" />
+          <label class="form-check-label" for="ganhar5">Discordo totalmente</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>
+          <h5>
+            4. Não me importo com altos e baixos no curto prazo desde que meu
+            retorno a longo prazo seja superior à média.
+          </h5>
+        </label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="investimentos1" name="investimentos"
+            value="Concordo totalmente" />
+          <label class="form-check-label" for="investimentos1">Concordo totalmente</label><br />
+          <input class="form-check-input" type="radio" id="investimentos2" name="investimentos" value="Concordo" />
+          <label class="form-check-label" for="investimentos2">Concordo</label><br />
+          <input class="form-check-input" type="radio" id="investimentos3" name="investimentos" value="Neutro" />
+          <label class="form-check-label" for="investimentos3">Neutro</label><br />
+          <input class="form-check-input" type="radio" id="investimentos4" name="investimentos" value="Discordo" />
+          <label class="form-check-label" for="investimentos4">Discordo</label><br />
+          <input class="form-check-input" type="radio" id="investimentos5" name="investimentos"
+            value="Discordo totalmente" />
+          <label class="form-check-label" for="investimentos5">Discordo totalmente</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>
+          <h5>
+            5. Evitar perdas neste ano é menos importante do que crescimento a
+            longo prazo. Proteger minha poupança a curto prazo não é minha
+            prioridade.
+          </h5>
+        </label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="perdas1" name="perdas" value="Concordo totalmente" />
+          <label class="form-check-label" for="perdas1">Concordo totalmente</label><br />
+          <input class="form-check-input" type="radio" id="perdas2" name="perdas" value="Concordo" />
+          <label class="form-check-label" for="perdas2">Concordo</label><br />
+          <input class="form-check-input" type="radio" id="perdas3" name="perdas" value="Neutro" />
+          <label class="form-check-label" for="perdas3">Neutro</label><br />
+          <input class="form-check-input" type="radio" id="perdas4" name="perdas" value="Discordo" />
+          <label class="form-check-label" for="perdas4">Discordo</label><br />
+          <input class="form-check-input" type="radio" id="perdas5" name="perdas" value="Discordo totalmente" />
+          <label class="form-check-label" for="perdas5">Discordo totalmente</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>
+          <h5>
+            6. Tenho razoável experiência e conhecimento de fundos de
+            investimento.
+          </h5>
+        </label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="experiencia1" name="experiencia"
+            value="Concordo totalmente" />
+          <label class="form-check-label" for="experiencia1">Concordo totalmente</label><br />
+          <input class="form-check-input" type="radio" id="experiencia2" name="experiencia" value="Concordo" />
+          <label class="form-check-label" for="experiencia2">Concordo</label><br />
+          <input class="form-check-input" type="radio" id="experiencia3" name="experiencia" value="Neutro" />
+          <label class="form-check-label" for="experiencia3">Neutro</label><br />
+          <input class="form-check-input" type="radio" id="experiencia4" name="experiencia" value="Discordo" />
+          <label class="form-check-label" for="experiencia4">Discordo</label><br />
+          <input class="form-check-input" type="radio" id="experiencia5" name="experiencia"
+            value="Discordo totalmente" />
+          <label class="form-check-label" for="experiencia5">Discordo totalmente</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-lg">Enviar</button>
+    </form>
+    <br />
+  </div>
+
+  <!-- Modal Perfil Agressivo -->
+  <div class="modal fade" id="aggressiveModal" tabindex="-1" role="dialog" aria-labelledby="agressivo"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="agressivo">Seu perfil é "Agressivo"</h5>
+        </div>
+        <div class="modal-body">
+          <p>
+            Investidores com perfil agressivo são aqueles que buscam obter o
+            máximo de rentabilidade possível e estão dispostos a correr riscos
+            elevados para alcançar esse objetivo. São investidores que possuem
+            alta tolerância a perdas e estão dispostos a correr riscos
+            elevados em busca de retornos mais atrativos. Geralmente, investem
+            em produtos de renda variável e possuem uma tolerância alta a
+            perdas.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"
+            onclick="window.location.href='landing.html'">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Perfil Moderado -->
+  <div class="modal fade" id="moderateModal" tabindex="-1" role="dialog" aria-labelledby="moderado" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="moderado">Seu perfil é "Moderado"</h5>
+        </div>
+        <div class="modal-body">
+          <p>
+            Investidores com perfil moderado são aqueles que buscam um
+            equilíbrio entre segurança e rentabilidade. São investidores que
+            estão dispostos a correr riscos moderados em busca de retornos
+            mais atrativos. Geralmente, investem em produtos de renda fixa e
+            variável e possuem uma tolerância moderada a perdas.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"
+            onclick="window.location.href='landing.html'">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Perfil Defensivo -->
+  <div class="modal fade" id="defensiveModal" tabindex="-1" role="dialog" aria-labelledby="defensivo"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="card-title" id="defensivo">Seu perfil é "Defensivo"</h5>
+        </div>
+        <div class="modal-body">
+          <p>
+            Investidores com perfil defensivo são aqueles que buscam preservar
+            o capital investido e evitar perdas. São investidores que não
+            estão dispostos a correr riscos e preferem investimentos mais
+            seguros, mesmo que isso signifique retornos menores. Geralmente,
+            investem em produtos de renda fixa e possuem baixa tolerância a
+            perdas.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"
+            onclick="window.location.href='landing.html'">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-light fixed-bottom">
+    <div class="container text-center">
+
+    </div>
+    <div class="container text-center">
+      <h5>CapitalRise</h5>
+      <h6>Endereço: Av. Paulista, 1000, São Paulo, SP</h6>
+      <h6>Telefone: (11) 99999-9999</h6>
+    </div>
+  </footer>
+</body>
+
+<script src="../scripts/investing_profile.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>

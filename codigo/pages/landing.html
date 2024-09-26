@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CapitalRise</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">CapitalRise</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="landing.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="meus_investimentos.html">Meus Investimentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produtos.html">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historico.html">historico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forum.html">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aprendizado.html">Aprendizado</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="logout()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+              <path fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- That yellow sexy bar. -->
+  <nav class="navbar border-bottom border-body" id="custom-nav">
+    <h1 id="welcomeMessage">Bem-vindo, Usuário.</h1>
+  </nav>
+  <br />
+  <br />
+
+  <!-- Total Investido -->
+  <div class="container">
+    <h3>Total Investido</h3>
+    <p>Confira o total investido na sua conta.</p>
+    <h3 id="totalInvested">R$ 0,00</h3>
+  </div>
+  <br />
+  <br />
+
+  <!-- Saldo disponível -->
+  <div class="container">
+    <h3>Saldo Disponível</h3>
+    <p>Confira o saldo disponível na sua conta.</p>
+    <h3 id="balance">R$ 0,00</h3>
+  </div>
+  <br />
+  <br />
+
+  <!-- Adicionar fundos -->
+  <div class="container">
+    <h3>Adicionar Fundos</h3>
+    <p>
+      Para adicionar fundos, realize uma transferência via PIX para a chave
+      <strong>10106175670</strong> e informe abaixo a quantidade transferida.
+    </p>
+    <form id="addFundsForm">
+      <label for="amount"></label>
+      <input type="number" id="amount" name="amount" min="0" />
+      <input type="submit" value="Adicionar" />
+    </form>
+  </div>
+  <br />
+  <br />
+
+  <!-- Perfil de investidor -->
+  <div class="container">
+    <h3>Perfil de Investidor</h3>
+    <br />
+    <h4 id="investorProfile">Indefinido</h4>
+    <p>
+      Você pode alterar seu perfil de investidor a qualquer momento clicando
+      no botão abaixo.
+    </p>
+    <a href="teste_perfil_investidor.html" class="btn btn-primary darker-gray">Alterar perfil</a>
+  </div>
+
+  <!-- Modal Sucesso Adicionar Fundos -->
+  <div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sucesso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Fundos adicionados com sucesso.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary darker-gray" id="okButton"
+            onclick="window.location.href='landing.html'">
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-light fixed-bottom">
+    <div class="container text-center">
+
+    </div>
+    <div class="container text-center">
+      <h5>CapitalRise</h5>
+      <h6>Endereço: Av. Paulista, 1000, São Paulo, SP</h6>
+      <h6>Telefone: (11) 99999-9999</h6>
+    </div>
+  </footer>
+
+  <script src="../scripts/landing.js"></script>
+  <script src="../scripts/logout.js"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

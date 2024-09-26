@@ -1,0 +1,67 @@
+.half-size {
+  width: 50% !important;
+  height: 50% !important;
+}
+
+.footer {
+  padding: 10px 0;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options {
+  margin-left: 20px;
+}
+
+body {
+  padding-bottom: 200px;
+  /* Height of the footer */
+}
+
+.darker-gray {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.darker-gray:focus {
+  outline: none;
+}
+
+.darker-gray:hover {
+  background-color: rgb(255, 210, 49);
+}
+
+#custom-nav {
+  background-color: rgb(255, 210, 49);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.ilust {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.colunaindex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#investir {
+  border: 0;
+  padding: 1em;
+  background-color: #FFB000;
+  font-weight: 700;
+}
+#investir:hover {
+  padding: 1.2em;
+  transition: .2s;
+}
