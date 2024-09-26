@@ -7,6 +7,32 @@
   <title>CapitalRise</title>
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .text-button-container {
+      display: flex;
+      flex-direction: column;
+      /* Empilha os elementos verticalmente */
+      align-items: flex-end;
+      /* Alinha à direita */
+      margin-right: 200px;
+      /* Espaçamento à direita */
+      text-align: center;
+      /* Centraliza o texto e o botão */
+    }
+
+    .text-button-container span {
+      white-space: nowrap;
+      /* Impede a quebra de linha */
+    }
+
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+      /* Centraliza o botão */
+      width: 100%;
+      /* Garante que o botão ocupe a largura total */
+    }
+  </style>
 </head>
 
 <body>
@@ -21,10 +47,7 @@
           <a class="nav-link active" href="meus_investimentos.html">Meus Investimentos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="produtos.html">Produtos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="historico.html">historico</a>
+          <a class="nav-link" href="historico.html">Historico</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="forum.html">Forum</a>
@@ -50,22 +73,90 @@
     </div>
   </nav>
 
-  <!-- That yellow sexy bar. -->
   <nav class="navbar border-bottom border-body" id="custom-nav">
     <h1>Posição à Mercado</h1>
   </nav>
   <br />
   <br />
+  <div style="display: flex; gap: 10px;">
+    <!-- Filtro de Investimentos -->
+    <div class="container">
+      <h3>Filtrar Investimentos</h3>
+      <br />
+      <form id="filterForm">
+        <div class="mb-3">
+          <label for="risk">Classe</label>
+          <select name="classea" id="classea">
+            <option value="">Selecione</option>
+            <option value="Ação">Ação</option>
+            <option value="Ação Internacional">Ação Internacional</option>
+            <option value="Tesouro Direto">Tesouro Direto</option>
+            <option value="Renda Fixa">Renda Fixa</option>
+            <option value="Fundo">Fundos</option>
+            <option value="Poupança">Poupança</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="nomeDoAtivo">Nome do ativo:</label>
+          <input type="text" id="nome" />
+        </div>
+        <br />
+        <br />
+        <input type="submit" value="Filtrar" class="btn btn-primary" />
+        <button type="button" id="clearFilters" class="btn btn-secondary">
+          Limpar filtros
+        </button>
+      </form>
+    </div>
+    <div class="content"></div>
+    <div class="text-button-container">
+      <span style="font-size: 30px;">Adicionar manualmente</span>
+      <div class="button-wrapper">
+        <button id="new-deposit">Novo aporte</button>
+      </div>
+    </div>
+  </div>
 
-  <!-- Posição à mercado -->
+  <div class="modal" id="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Cadastre seu aporte</h1>
+      <form id="form">
+        <p> <label for="classe">Qual classe de ativo quer adicionar?</label>
+          <select name="classe" id="classe">
+            <option value="">Selecione</option>
+            <option value="Ação">Ação</option>
+            <option value="Ação Internacional">Ação Internacional</option>
+            <option value="Tesouro Direto">Tesouro Direto</option>
+            <option value="Renda Fixa">Renda Fixa</option>
+            <option value="Fundo">Fundos</option>
+            <option value="Poupança">Poupança</option>
+          </select>
+        </p>
+        <p>
+          <label for="nomeDoAtivo">Nome do ativo:</label>
+          <input type="text" id="nomeDoAtivo" />
+        </p>
+        <p>
+          <label for="valorTotal">Valor total : </label>
+          <input type="text" id="valorTotal" />
+        </p>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
   <div class="container">
-    <p>Acompanhe a posição à mercado dos seus investimentos.</p>
+    <div style="margin-left: 35%;">
+      <p>
+      <h6>Acompanhe seus investimentos.</h6>
+      </p>
+    </div>
     <table class="table">
       <thead>
         <tr>
+          <th scope="col">Classe</th>
           <th scope="col">Produto</th>
-          <th scope="col">Quantidade</th>
-          <th scope="col">Preço Unitário</th>
           <th scope="col">Valor Total</th>
           <th scope="col">Vender</th>
         </tr>
@@ -81,9 +172,6 @@
 
   <footer class="footer bg-light fixed-bottom">
     <div class="container text-center">
-
-    </div>
-    <div class="container text-center">
       <h5>CapitalRise</h5>
       <h6>Endereço: Av. Paulista, 1000, São Paulo, SP</h6>
       <h6>Telefone: (11) 99999-9999</h6>
@@ -93,9 +181,7 @@
   <script src="../scripts/my_investments.js"></script>
   <script src="../scripts/logout.js"></script>
   <script src="../bootstrap/js/bootstrap.js"></script>
+  <!-- <script src="../scripts/modal.js"></script> -->
 </body>
 
 </html>
-<script src="../scripts/produtos.js"></script>
-<script src="../scripts/logout.js"></script>
-<script src="../bootstrap/js/bootstrap.js"></script>
